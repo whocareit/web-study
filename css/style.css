@@ -1,0 +1,129 @@
+@charset "utf-8";
+  body,h1,ul,h2,p,figure{
+  	margin: 0;
+  	padding: 0;
+  }
+   ul{
+   	list-style: outside none none;
+   }
+  #search{
+  	width: 100%;
+  	min-width: 1263px;
+  	height: 600px;
+  	background: url(../img/search.jpg) no-repeat center;
+  	position: relative;
+  }
+ #search .center{
+ 	  width: 600px;
+ 	  height: 60px;
+ 	  background-color: #000000;
+ 	  position: absolute;
+ 	  top: 50%;
+ 	  left: 50%;
+ 	  margin: -30px 0px 0px -300px;
+ 	  opacity: 0.6;
+ 	  border-radius: 10px;
+ }
+ #search .search{
+ 	  width: 446px;
+ 	  height: 52px;
+ 	  background-color: #eee;
+ 	  position: absolute;
+ 	  margin: -27px 0px 0px -295px;
+ 	  top: 50%;
+ 	  left: 50%;
+ 	  border: 1px solid #666;
+ 	  color: #666;
+ 	  font-size: 24px;
+ 	  padding: 0 10px;
+ 	  border-radius: 10px;
+ 	  outline: none;
+ }
+ #search .button{
+  	width: 120px;
+ 	  height: 54px;
+ 	  background-color: #eee;
+ 	  position: absolute;
+ 	  margin: -27px 0px 0px 175px;
+ 	  top: 50%;
+ 	  left: 50%;
+ 	  border: 1px solid #666;
+ 	  color: #666;
+ 	  font-size: 24px;
+ 	  border-radius: 10px;
+ 	  cursor: pointer;
+ 	  font-weight: bold;
+ }
+ #tour{
+ 	 width: 1263px;
+ 	 height: 1290px;
+ 	 margin: 30px auto;
+ 	 text-align: center;
+ }
+ #tour .center h2{
+ 	font-size: 45px;
+ 	letter-spacing: 2px;
+ 	color: #666;
+ 	margin: 10px 0;
+ }
+ #tour .center p{
+ 	color: #666;
+ 	margin: 10px 0;
+ }
+ #tour figure{
+ 	border: 1px solid #ddd;
+ 	display: inline-block;
+ 	padding: 4px;
+ 	border-radius: 4px;
+ 	margin: 15px 10px;
+ 	width: 385px;
+ 	text-align: left;
+ 	position: relative;
+ }
+ #tour figure img{
+ 	vertical-align: middle;
+ }
+ #tour figcaption{
+ 	color: #777;
+ 	font-size: 13px;
+ 	letter-spacing: 1px;
+ 	line-height: 1.5;
+ 	padding: 7px 0 5px 0;
+ }
+ #tour .title{
+ 	color: #333;
+ 	font-weight: normal;
+ }
+ #tour .sat{
+ 	float: right;
+ 	font-size: 13px;
+ 	color: #999;
+ 	font-style: normal;
+ 	position: relative;
+ 	right: 5px;
+ 	top: 5px;
+ }
+ #tour .price{
+ 	color: orange;
+ 	color: 14px;
+ }
+ #tour .price strong{
+ 	font-size: 20px;
+ 	letter-spacing: 1px;
+ }
+ #tour .type{
+ 	width: 90px;
+ 	height: 25px;
+ 	font-size: 14px;
+ 	color: #fff;
+ 	background-color: #287c07;
+ 	letter-spacing: 1px;
+ 	text-align: center;
+ 	line-height: 25px;
+ 	position: absolute;
+ 	border-bottom-right-radius: 4px;
+ 	top: 4px;
+ 	left: 4px;
+ }
+ 
+ 

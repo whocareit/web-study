@@ -1,0 +1,255 @@
+@charset "utf-8";
+ body,h3,h2,ol{
+	margin: 0;
+	padding: 0;
+}
+ #headline{
+ 	width: 100%;
+ 	min-width: 1263px;
+ 	height: 300px;
+ 	background: linear-gradient(to bottom right,rgba(0,0,0,0.7),rgba(0,0,0,0)),url(../img/headline.jpg)no-repeat center;
+ }
+ #headline .center{
+ 	width: 1263px;
+ 	height: 300px;
+ 	margin: 0 auto;
+ }
+ #headline hgroup{
+ 	padding: 100px 0 0 50px;
+ }
+ #headline h2{
+ 	color: #eee;
+ 	font-size: 36px;
+ 	letter-spacing: 1px;
+ }
+ #headline h3{
+ 	color: #eee;
+ 	font-size: 20px;
+ 	letter-spacing: 1px;
+ }
+ #container{
+ 	width: 100%;
+ }
+ #container .sidebar{
+ 	width: 320px;
+ 	float: right;
+ }
+ #container .sidebox{
+ 	border: 1px solid #EEEEEE;
+ 	margin: 0 0 10px 0;
+ }
+ #container .sidebox h2{
+ 	font-size: 20px;
+ 	font-weight: normal;
+ 	letter-spacing: 1px;
+ 	text-indent: 8px;
+ 	height: 40px;
+ 	line-height: 40px;
+ 	background-color: #fafafa;
+ 	color: #666;
+ 	text-align: left;
+ }
+ #container .tag{
+ 	padding: 10px 0;
+ }
+ #container .tag li{
+ 	display: inline-block;
+ 	width: 100px;
+ 	height: 35px;
+ 	line-height: 35px;
+ 	margin: 2px 0;
+ 	background-color: #eee;
+ 	text-align: center;
+ }
+ #container .tag a{
+ 	display: block;
+ 	color: #999;
+ }
+ #container .tag a:hover{
+ 	background-color: #458b00;
+ 	color: #fff;
+ }
+ #container .figure{
+ 	padding: 10px 0;
+ }
+ #container figure{
+ 	display: inline-block;
+ 	padding: 3px;
+ 	color: #666;
+ }
+ #container .box{
+ 	padding: 10px 0;
+ }
+ #container .box a{
+ 	display: inline-block;
+ 	width: 150px;
+ 	height: 40px;
+ 	line-height: 40px;
+ 	margin: 2px 0;
+ 	background-color: #eee;
+ 	color: #888;
+ 	text-align: center;
+ }
+ #container .box a:hover{
+ 	background-color: #458b00;
+ 	color: #fff;
+ }
+ #container .list{
+ 	width: 910px;
+ 	height: 1200px;
+ 	float: left;
+ 	margin: 30px 115px;
+ }
+ #container .info{
+ 	height: 45px;
+ 	line-height: 45px;
+ 	background-color: #EEEEEE;
+ 	margin: 0 0 20px 0;
+ }
+ #container .left{
+ 	display: inline-block;
+ 	float: left;
+ }
+ #container .left li{
+ 	display: inline-block;
+ 	background-color: #ccc;
+ 	width: 150px;
+ 	height: 43px;
+ 	line-height: 45px;
+ 	text-align: center;
+ 	}
+ #container .left li:first-child{
+ 	background: #fff;
+ 	border-top: 2px solid green;
+ 	position: relative;
+ 	left: 1px;
+ }
+ #container .left li a{
+ 	color: #666;
+ }
+ #container .right{
+ 	display: inline-block;
+ 	padding: 0 20px 0 0;
+ 	float: right;
+ }
+ #container .right li{
+ 	display: inline-block;
+ 	width: 60px;
+ 	height: 45px;
+ 	line-height: 45px;
+ 	text-align: center;
+ }
+ #container .right a{
+ 	padding: 3px 8px;
+ 	color: #666;
+ }
+ #container .right a.selected,#container .right a:hover{
+ 	background-color: #458b00;
+ 	color: #fff;
+ }
+ #container .tour{
+ 	padding: 0;
+ 	margin: 20px 0;
+ 	width: 910px;
+ 	background-color: #ccc;
+ 	border: 1px solid #eee;
+ 	position: relative;
+ }
+ #container .tour ol{
+ 	padding: 0 0 0 25px;
+ 	color: #666;
+ 	line-height: 2;
+ }
+ #container .tour mark{
+ 	background-color: #fff;
+ 	border: 1px solid #458B00;
+ 	padding: 0 5px;
+ 	color: #458B00;
+ 	border-radius: 4px;
+ }
+ #container .tour .buy{
+ 	position: absolute;
+ 	top: 99px;
+ 	right: 30px;
+ }
+ #container .tour .price{
+ 	font-size: 20px;
+ 	color: #f60;
+ }
+ #container .tour .price strong{
+ 	font-size: 36px;
+ }
+ #container .tour .price s{
+ 	font-size: 16px;
+ 	color: #999;
+ }
+ #container .tour .reserve {
+ 	margin: 10px 0 0 0;
+ 	
+ }
+ #container .tour .reserve a {
+ 	display: inline-block;
+ 	width: 152px;
+ 	height: 40px;
+ 	font-size: 20px;
+ 	color: #fff;
+ 	line-height: 40px;
+ 	background-color: #f60;
+ 	text-align: center;
+ 	border-radius: 4px;
+ }
+ #container .tour .type{
+ 	width: 90px;
+ 	height: 25px;
+ 	font-size: 14px;
+ 	color: #fff;
+ 	background-color: #287c07;
+ 	letter-spacing: 1px;
+ 	text-align: center;
+ 	line-height: 25px;
+ 	position: absolute;
+ 	border-bottom-right-radius: 4px;
+ 	top: 0px;
+ 	left: 0px;
+ }
+ #container .tour .disc{
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+    width: 52px;
+    height: 52px;
+ }
+ #container img{
+ 	float: left;
+ }
+ #container .tour figcaption{
+ 	width: 525px;
+ 	height: 285px;
+ 	float: right;
+ }
+ #container .tour h2{
+ 	font-size: 24px;
+ 	color: #333;
+ 	font-weight: normal;
+ 	padding: 10px 0 10px 25px;
+ }
+ #container .tour h3{
+ 	font-size: 16px;
+ 	color: #666;
+ 	line-height: 1.5;
+ 	font-weight: normal;
+ 	padding: 10px 0 10px 25px;
+ }
+ #container .tour footer{
+ 	width: 525px;
+ 	height: 35px;
+ 	line-height: 35px;
+ 	text-indent: 25px;
+ 	color: #666;
+ 	letter-spacing: 1px;
+ 	position: absolute;
+ 	bottom: 0;
+ }
+ #container .tour time{
+ 	color: #458B00;
+ }
