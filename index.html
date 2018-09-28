@@ -2,39 +2,46 @@
 <html lang="zh-cn">
 	<head>
 		<meta charset="utf-8" />
-		<title>项目实践布局-pc端固定布局</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>旅行旅游社-响应式</title>
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/basic.css" />
 	</head>
 	<body>
-		<header id="header">
-		 <div class="center">
+	  <header id="header">
+		<div class="center">
           <h1 class="logo">旅行风景社</h1>
 	        <nav  class="link">
 	        	<h2 class="none">网站导航</h2>
 		      <ul>
 		          <li class="active"><a href="index.html">首页</a></li>
-		          <li><a href="information.html">旅游咨询</a></li>
-		          <li><a href="scenery.html">风景介绍</a></li>
-		          <li><a href="order.html">机票预订</a></li>
-		          <li><a href="about.html">公司简介</a></li>
+		          <li><a href="information.html"><span class="xs-hidden">旅游</span>咨询</a></li>
+		          <li class="xs-hidden"><a href="scenery.html">风景欣赏</a></li>
+		          <li><a href="ticket.html">机票<span class="xs-hidden">订购</span></a></li>
+		          <li><a href="about.html"><span class="xs-hidden">关于</span>公司</a></li>
 		       </ul
 		    </nav>  
-          </div>
-		</header>		
-	<div id="search">
-		<div class="center"></div>
-		<input type="text" class="search" placeholder="请输入旅游景点或城市" />
-		<button class="button">搜索</button>
-	</div>
-	<div id="tour">
+        </div>
+	 </header>	
+		<div id="adver">
+			<img src="img/adver.jpg" alt="旅游旅行社" />
+			<div class="center"></div>
+			<div class="center copy">
+			   <input type="text" class="search" placeholder="请输入旅游景点或城市" />
+		      <button class="button">搜索</button>
+			</div>
+		</div>
+		<div id="tour">
 		<section class="center">
 			<h2>热门旅游</h2>
 			<p>国内旅游、国外旅游、自驾旅游、自助旅游、邮轮签证、主题旅游等各种最新热门推荐</p>
 		</section>
 		<figure>
 			<img src="img/tour1.jpg"  alt="热门旅游"/>
-			<figcaption><strong class="title">&lt;自贡-博物馆6日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，成人优惠600/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;自贡-博物馆6日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，成人优惠600/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  70%</em>
 			<span class="price">￥<strong>2864</strong>起</span>
@@ -43,7 +50,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour2.jpg"  alt="国内专线旅游"/>
-			<figcaption><strong class="title">&lt;雅安-碧峰峡1日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠500/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;雅安-碧峰峡1日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠500/人
+			    </div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  80%</em>
 			<span class="price">￥<strong>1000</strong>起</span>
@@ -52,7 +63,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour3.jpg"  alt="成都三日游"/>
-			<figcaption><strong class="title">&lt;成都-景点3日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，酒店入住，成人优惠800/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;成都-景点3日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，酒店入住，成人优惠800/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  95%</em>
 			<span class="price">￥<strong>2000</strong>起</span>
@@ -61,7 +76,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour4.jpg"  alt="马尔代夫三日游"/>
-			<figcaption><strong class="title">&lt;马尔代夫-海滩3日游&gt;</strong> 包团特惠，赠送优惠券，酒店入住，专车包送，成人优惠500/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;马尔代夫-海滩3日游&gt;</strong> 包团特惠，赠送优惠券，酒店入住，专车包送，成人优惠500/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  99%</em>
 			<span class="price">￥<strong>4850</strong>起</span>
@@ -70,7 +89,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour5.jpg"  alt="威尼斯7天游"/>
-			<figcaption><strong class="title">&lt;威尼斯7日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，酒店入住，机票报销，成人优惠1000/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;威尼斯7日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，酒店入住，机票报销，成人优惠1000/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  90%</em>
 			<span class="price">￥<strong>9999</strong>起</span>
@@ -79,7 +102,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour6.jpg"  alt="法国巴黎4日游"/>
-			<figcaption><strong class="title">&lt;法国巴黎日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，五星级酒店，成人优惠800/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;法国巴黎日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，五星级酒店，成人优惠800/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度 92%</em>
 			<span class="price">￥<strong>8000</strong>起</span>
@@ -88,7 +115,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour7.jpg"  alt="泰国9日游"/>
-			<figcaption><strong class="title">&lt;泰国9日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠700/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;泰国9日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠700/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  80%</em>
 			<span class="price">￥<strong>6000</strong>起</span>
@@ -97,7 +128,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour8.jpg"  alt="欧洲4日游"/>
-			<figcaption><strong class="title">&lt;欧洲4日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠900/人</figcaption>
+			<figcaption>
+				<div tour_title>
+				    <strong class="title">&lt;欧洲4日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠900/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  93%</em>
 			<span class="price">￥<strong>7500</strong>起</span>
@@ -106,7 +141,11 @@
 		</figure>
 		<figure>
 			<img src="img/tour9.jpg"  alt="宜宾1日游"/>
-			<figcaption><strong class="title">&lt;宜宾1日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠100/人</figcaption>
+			<figcaption>
+				<div tour_title>
+					<strong class="title">&lt;宜宾1日游&gt;</strong> 包团特惠，超丰富景点，赠送优惠券，包饭，成人优惠100/人
+				</div>
+			</figcaption>
 			<div>
 			<em class="sat">满意度  100%</em>
 			<span class="price">￥<strong>600</strong>起</span>
@@ -114,8 +153,8 @@
 		    <div class="type">国内短线</div>
 		</figure>
 	</div>
-	<footer id="footer">
-		<div class="top">
+	  <footer id="footer">
+		<div class="top sm-hidden ">
 			<div class="left block">
 				<h2>合作伙伴</h2>
 				<hr />
@@ -146,7 +185,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="bottom">Copyright &copy; YCKU|苏CIP 备1264545454 号|旅游经营许可证：LC-YB-KL4545644</div>
-	</footer>
+		<div class="clearfix"></div>
+		<div class="version sm-visible">
+			客户端|移动端|电脑端
+		</div>
+		<div class="bottom">Copyright &copy; YCKU|苏CIP 备1264545454 号<span class="sm-hidden">|旅游经营许可证：LC-YB-KL4545644</span></div>
+	  </footer>
 	</body>
 </html>

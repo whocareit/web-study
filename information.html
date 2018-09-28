@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 	<head>
-		<meta charset="UTF-8">
-		<title>项目实践布局-pc端固定布局</title>
-		<link rel="stylesheet" href="css/basic.css" />
-		<link rel="stylesheet" href="css/head.css" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>旅行旅游社-响应式</title>
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<header id="header">
-		 <div class="center">
+	  <header id="header">
+		<div class="center">
           <h1 class="logo">旅行风景社</h1>
 	        <nav  class="link">
 	        	<h2 class="none">网站导航</h2>
 		      <ul>
 		          <li><a href="index.html">首页</a></li>
-		          <li class="active"><a href="information.html">旅游咨询</a></li>
-		          <li><a href="scenery.html">风景介绍</a></li>
-		          <li><a href="order.html">机票预订</a></li>
-		          <li><a href="about.html">公司简介</a></li>
-		      </ul>
+		          <li class="active"><a href="information.html"><span class="xs-hidden">旅游</span>咨询</a></li>
+		          <li class="xs-hidden"><a href="scenery.html">风景欣赏</a></li>
+		          <li><a href="ticket.html">机票<span class="xs-hidden">订购</span></a></li>
+		          <li><a href="about.html"><span class="xs-hidden">关于</span>公司</a></li>
+		       </ul
 		    </nav>  
-         </div>
-		</header>
-	    <div id="headline">
-	    	<div class="center">
+        </div>
+	 </header>	
+		<div id="headline">
+			<img src="img/headline.jpg" alt=""/>
 	    		<hgroup>
 	    		<h2>旅游咨询</h2>
 	    		<h3>介绍各种最新旅游信息、咨询要闻、景点攻略</h3>
 	    		</hgroup>
-	    </div>
 	    </div>
 	    <div id="container">
 	    	<aside class="sidebox sidebar">
@@ -113,94 +112,86 @@
 	    	           </div>
 	    		</div>
 	    	</aside>
-	    	<div class="list information">
-	    		<div class="info">
-	    			<ul class="left">
-	    				<li><a href="###">限时特价</a></li>
-	    				<li><a href="###">热门推荐</a></li>
-	    			</ul>
-	    			<ul class="right">
-	    				<li><a href="###" class="selected">折扣</a></li>
-	    				<li><a href="###">推荐</a></li>
-	    				<li><a href="###">价格</a></li>
-	    			</ul>
-		    		</div>
-		    			<figure class="tour">
-		    		       <img src="img/tour1.jpg"  alt="雅安-碧峰峡1日游"/>
-		    		       	  <figcaption>
-		    		       	  	 <article>
-		    		       	  	 	<header>
-		    		       	  	 	   <hgroup>
-		    		       	  	 		<h2>成都-景点3日游</h2>
-		    		       	  	 		<h3> 包团特惠，超丰富景点，赠送优惠券，酒店入住，成人优惠800/人</h3>
-		    		       	  	 	   </hgroup>
-		    		       	  	 	   <ol>
-		    		       	  	 	   	 <li><mark>交通</mark> 春秋航空，杭州出发，无需转机</li>
-		    		       	  	 	   	 <li><mark>团期</mark>11/10、11/13、11/16...</li>
-		    		       	  	 	   </ol>
-		    		       	  	 	   <div class="buy">
-		    		       	  	 	   	 <div class="price">￥<strong>9999</strong><s>100000</s></div>
-		    		       	  	 	   	 <div class="reserve"><a href="###">立即抢购</a></div>
-		    		       	  	 	   </div>
+	    <div>
+	    <div class="list information">
+	      <h2>旅游咨询</h2>
+		   <figure class="tour">
+		      <img src="img/tour11.jpg"  alt="雅安-碧峰峡1日游"/>
+		    	  <figcaption>
+		    		     <article>
+		    		       	<header>
+		    		       	  	<hgroup>
+		    		       	  	 <h2 class="xs-hidden">成都-景点3日游</h2>
+		    		       	  	 <h3> 包团特惠，超丰富景点，赠送优惠券，酒店入住，成人优惠800/人</h3>
+		    		       	  	 </hgroup>
+		    		       	  	 <ol class="md-hidden">
+		    		       	  	 <li><mark>交通</mark> 春秋航空，杭州出发，无需转机</li>
+		    		       	  	 <li><mark>团期</mark>11/10、11/13、11/16...</li>
+		    		       	  	 </ol>
+		    		       	  	 <div class="buy">
+		    		       	  	 	  <div class="price">￥<strong>9999</strong><s>100000</s></div>
+		    		       	  	 	  <div class="reserve md-hidden"><a href="###">立即抢购</a></div>
+		    		       	  	 </div>
 		    		       	  	 	   <div class="type">国内短线</div>
-		    		       	  	 	   <div class="disc">打折</div>
-		    		       	  	 	</header>
-		    		       	  	 	<footer>本团由旅游旅行社赞助提供，截止<time>2018.9.20</time></footer>
-		    		       	  	 </article>
+		    		       	  	 	   <div class="disc xs-hidden">打折</div>
+		                     </header>
+		                     <footer class="md-hidden">本团由旅游旅行社赞助提供，截止<time>2018.9.20</time></footer>
+		    		       	 </article>
 		    		       	  </figcaption>
 		    	        </figure>
 		    	           <figure class="tour">
-		    		       <img src="img/tour2.jpg"  alt="雅安-碧峰峡1日游"/>
+		    		       <img src="img/tour22.jpg"  alt="雅安-碧峰峡1日游"/>
 		    		       	  <figcaption>
 		    		       	  	 <article>
 		    		       	  	 	<header>
 		    		       	  	 	   <hgroup>
-		    		       	  	 		<h2>雅安-碧峰峡1日游</h2>
-		    		       	  	 		<h3> 包团特惠，超丰富景点，赠送优惠券，成人优惠600/人</h3>
+		    		       	  	 		<h2 class="xs-hidden">雅安-碧峰峡1日游</h2>
+		    		       	  	 		<h3> 包团特惠，超丰富景点，高级酒店入住，赠送优惠券，成人优惠600/人</h3>
 		    		       	  	 	   </hgroup>
-		    		       	  	 	   <ol>
+		    		       	  	 	   <ol class="md-hidden">
 		    		       	  	 	   	 <li><mark>交通</mark> 春秋航空，杭州出发，无需转机</li>
 		    		       	  	 	   	 <li><mark>团期</mark>11/10、11/13、11/16...</li>
 		    		       	  	 	   </ol>
 		    		       	  	 	   <div class="buy">
 		    		       	  	 	   	 <div class="price">￥<strong>2580</strong><s>3890</s></div>
-		    		       	  	 	   	 <div class="reserve"><a href="###">立即抢购</a></div>
+		    		       	  	 	   	 <div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 		    		       	  	 	   </div>
 		    		       	  	 	   <div class="type">国内长线</div>
-		    		       	  	 	   <div class="disc">打折</div>
+		    		       	  	 	   <div class="disc xs-hidden">打折</div>
 		    		       	  	 	</header>
-		    		       	  	 	<footer>本团由旅游旅行社赞助提供，截止<time>2018.9.19</time></footer>
+		    		       	  	 	<footer class="md-hidden">本团由旅游旅行社赞助提供，截止<time>2018.9.19</time></footer>
 		    		       	  	 </article>
 		    		       	  </figcaption>
 		    	        </figure>
 		    	        <figure class="tour">
-		    		       <img src="img/tour3.jpg"  alt="马尔代夫-海滩3日游"/>
+		    		       <img src="img/tour33.jpg"  alt="马尔代夫-海滩3日游"/>
 		    		       	  <figcaption>
 		    		       	  	 <article>
 		    		       	  	 	<header>
 		    		       	  	 	   <hgroup>
-		    		       	  	 		<h2>马尔代夫-海滩3日游</h2>
-		    		       	  	 		<h3> 包团特惠，赠送优惠券，酒店入住，专车包送，成人优惠500/人</h3>
+		    		       	  	 		<h2 class="xs-hidden">马尔代夫-海滩3日游</h2>
+		    		       	  	 		<h3> 包团特惠，赠送优惠券，高级酒店入住，专车包送，成人优惠500/人</h3>
 		    		       	  	 	   </hgroup>
-		    		       	  	 	   <ol>
+		    		       	  	 	   <ol class="md-hidden">
 		    		       	  	 	   	 <li><mark>交通</mark> 春秋航空，杭州出发，无需转机</li>
 		    		       	  	 	   	 <li><mark>团期</mark>11/10、11/13、11/16...</li>
 		    		       	  	 	   </ol>
 		    		       	  	 	   <div class="buy">
 		    		       	  	 	   	 <div class="price">￥<strong>6660</strong><s>10000</s></div>
-		    		       	  	 	   	 <div class="reserve"><a href="###">立即抢购</a></div>
+		    		       	  	 	   	 <div class="reserve md-hidden"><a href="###">立即抢购</a></div>
 		    		       	  	 	   </div>
 		    		       	  	 	   <div class="type">国际短线</div>
-		    		       	  	 	   <div class="disc">打折</div>
+		    		       	  	 	   <div class="disc xs-hidden">打折</div>
 		    		       	  	 	</header>
-		    		       	  	 	<footer>本团由旅游旅行社赞助提供，截止<time>2018.9.20</time></footer>
+		    		       	  	 	<footer class="md-hidden">本团由旅游旅行社赞助提供，截止<time>2018.9.20</time></footer>
 		    		       	  	 </article>
 		    		       	  </figcaption>
 		    	        </figure>
 	    		</div>
+	    </div>	
 	    </div>
-		<footer id="footer">
-		<div class="top">
+	  <footer id="footer">
+		<div class="top sm-hidden ">
 			<div class="left block">
 				<h2>合作伙伴</h2>
 				<hr />
@@ -231,7 +222,12 @@
 				</ul>
 			</div>
 		</div>
-		<div class="bottom">Copyright &copy; YCKU|苏CIP 备1264545454 号|旅游经营许可证：LC-YB-KL4545644</div>
-	</footer>
+		<div class="clearfix"></div>
+		<div class="version sm-visible">
+			客户端|移动端|电脑端
+		</div>
+		<div class="bottom">Copyright &copy; YCKU|苏CIP 备1264545454 号<span class="sm-hidden">|旅游经营许可证：LC-YB-KL4545644</span></div>
+	  </footer>
 	</body>
 </html>
+
