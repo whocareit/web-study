@@ -200,7 +200,7 @@ ul,li{
 	display: inline-block;
 	width: 62px;
 	height: 62px;
-	background-image: url(img/taobao.png);
+	background-image: url(../img/taobao.png);
 	background-size: 100% 100%;
 }
 .topic-wraper{
@@ -338,7 +338,7 @@ ul,li{
 	margin: 6px 8px;
 	width: 520px;
 	height: 280px;
-	background-image: url(img/big.jpg);
+	background-image: url(../img/big.jpg);
 	background-size: 100% 100%;
 	position: relative;
 }
@@ -453,7 +453,7 @@ ul,li{
 	float: left;
 	height: 70px;
 	width: 170px;
-	background-image: url(img/1234_.webp);
+	background-image: url(../img/1234_.webp);
 	background-size: 100% 100%;
 }
 .main-left-b-headline-last{
