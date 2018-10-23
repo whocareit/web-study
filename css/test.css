@@ -55,6 +55,9 @@ ul,li{
 	margin-right: 14px; 
 	line-height: 35px;
 }
+.top-menu2 li:hover{
+	cursor: pointer;
+}
 /*接下的部分是中间的搜索的部分*/
 .search-wraper{
 	width: 100%;
