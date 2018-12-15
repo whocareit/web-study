@@ -57,25 +57,27 @@ li,ul,ol{
 }
 .main_box .main_left .main_li{
 	float: left;
+	display: block;
 	cursor: pointer;
 	margin: 0 25px;
 	white-space: nowrap;
+	width: 5%;
 }
-.main_li a::after{
-	content: '';
-	width: 5rem;
-	height: 0.1875rem;
-	left: 0;
-	position: absolute;
-	bottom: 0;
-	background: #fff;
-	transition: all 0.6 ease;
-}
+
 .main_box .main_left li a{
 	display: block;
 	font-size: 1rem;
 	color: #fff;
 }
+.main_box .main_left li hr{
+	width: 0;
+	height: 0.1875rem;
+	border: none;
+	background-color: #E3120B;
+	margin-left: -1rem;
+	transition: width 1s ease;
+}
+
 .main_side{
 	width: 2rem;
 	height: 2rem;
@@ -199,7 +201,7 @@ li,ul,ol{
 	background-repeat: no-repeat;	
 }
 /*引入第一张轮播图片*/
-.lunbo{
+#lunbo{
 	display: flex;
 	overflow: hidden;
 	width: 500%;
@@ -240,7 +242,6 @@ li,ul,ol{
 	align-self: center;
 	font-weight: 200;
 	color: #fff;
-	
 	opacity: 0;
 	animation-name: topic1_p1;
 	animation-duration: 1s;
@@ -442,7 +443,7 @@ li,ul,ol{
 	font-weight: 200;
 }
 
-/*引入第三张轮播图片*/
+/*引入第二张轮播图片*/
 .img_topic3{
 	position: relative;
 	width: 20%;
@@ -549,6 +550,8 @@ li,ul,ol{
 	width: 8%;
 }
 .page2_right_p{
+	display: flex;
+	justify-content: center;
 	position: absolute;
 	left: 57%;
 	top: 44%;
@@ -557,6 +560,21 @@ li,ul,ol{
 	line-height: 1.8rem;
 	color: #777;
 	font-weight: 200;
+	animation: page2_right_p 0.7s forwards;
+}
+@keyframes page2_right_p{
+	0%{
+		opacity: 0;
+		font-size: 0rem;
+	}
+	75%{
+		opacity: 0.5;
+		font-size: 0.5rem;
+	}
+	100%{
+		opacity: 1;
+		font-size: 1.05rem;
+	}
 }
 .page2_right_more{
 	position: absolute;
@@ -570,23 +588,28 @@ li,ul,ol{
 	cursor: pointer;
 	overflow: hidden;
 }
-.page2_right_more span{
+.page2_right_more_div{
+	width: 9.5rem;
+	height: 5rem;
+	transition: margin-top 0.6s ease;
+}
+.page2_right_more_div:hover{
+	margin-top: -2.5rem;
+}
+.page2_right_more .span1{
 	display: block;
 	width: 9.5rem;
 	height: 2.5rem;
 	color: #000;
 }
-.page2_right_more span::after{
+.page2_right_more .span2{
+	display: block;
 	width: 9.5rem;
 	height: 2.5rem;
-	font-size: 1rem;
-	color: #000;
+	color: #fff;
 	background-color: red;
-	transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1) 200ms ;
 }
-.page2_right_more span::after:hover{
-	transform: translate(0,-2.5rem);
-}
+
 .page3{
 	position: relative;
 	width: 100%;
@@ -641,7 +664,15 @@ li,ul,ol{
 	background: #fff;
 	z-index: 1000;
 }
-
+.page3_border{
+	position: absolute;
+	top: 15%;
+	left: 30%;
+	width: 40rem;
+	height: 32rem;
+	border: 1px dashed #fff;
+	z-index: 1000;
+}
 .page3_lb_ul{
 	width: 100%;
 	height: 100%;
@@ -819,7 +850,7 @@ li,ul,ol{
 	background-size: cover;
 	display: flex;
 	filter: brightness(0.8);
-	-webkit-filter: brightness(0.6);
+	-webkit-filter: brightness(0.8);
 }
 .page3_lb_ul .page3_ul .page3_li5 h4{
 	position: absolute;
@@ -836,6 +867,20 @@ li,ul,ol{
 	top: 48%;
 	left: 33.5%;
 	color: #fff;
+}
+.page3_button{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 60rem;
+	height: 28rem;
+	background-color: black;
+	opacity: 0.4;
+	filter: brightness(0.8);
+	-webkit-filter: brightness(0.8);
+}
+.page3_button1{
+	
 }
 .page4{
 	position: relative;
@@ -1068,6 +1113,13 @@ li,ul,ol{
 	width: 22.5%;
 	height: 46.5%;
 	margin: 2.5% 2.5% 0 0;
+	/*animation:page5_ul_li 1s forwards;
+}
+@keyframes page5_ul_li{
+	from{
+		transform: translate();
+	}
+	to{}*/
 }
 .page5 .page5_background .page5_ul li img{
 	width: 100%;
