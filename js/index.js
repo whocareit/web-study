@@ -73,6 +73,9 @@ $(function(){
 				$(".page2 .page2_right_more").removeClass("page2_right_more_animation");
 				break;
 				
+				case 3:
+				$(".page3 .page3_button").removeClass("page3_button_animation");
+				
 				case 5:
 				$(".page5_ul_li1").removeClass("page5_ul_li1_animation");
 				$(".page5_ul_li2").removeClass("page5_ul_li2_animation");
@@ -94,6 +97,7 @@ $(function(){
 				$(".page6 .page6_bottom h4").removeClass("page6_bottom_h4_animation");
 				$(".page6 .page6_bottom p").removeClass("page6_bottom_p_animation");
 				break;
+				
 			}
 			switch(nextIndex){
 				case 2:
@@ -101,6 +105,9 @@ $(function(){
 				$(".page2 .page2_right_p").addClass("page2_right_p_animation");
 				$(".page2 .page2_right_more").addClass("page2_right_more_animation");
 				break;
+				
+				case 3:
+				$(".page3 .page3_button").addClass("page3_button_animation");
 				
 				case 5:
 				$(".page5_ul_li1").addClass("page5_ul_li1_animation");
@@ -212,22 +219,157 @@ window.onload = function() {
 	})
 	
 	/*page4点击事件*/
-	var page4_left = $(".page3_button .page4_button1");
-	var page4_right = $(".page3_button .page4_button2");
-	var page4_first = parseInt($(".page4_center_L1","width"));
-	var new4_left = parseInt($(".page4_center_cotainer","margin-left"));
-	console.log(page4_first);
-	console.log(new4_left);
+	var page4_left = $(".page4_bottom .page4_button1");
+	var page4_right = $(".page4_bottom .page4_button2");
+	var page4_first = parseInt($(".page4_center_L1").css("width"));
 	
-	page4_left.click(function(){
+	page4_right.click(function(){
 		this4_left();
 	})
+	page4_left.click(function(){
+		this4_right()
+	})
 	function this4_left(){
-		var new4_left = parseInt($(".page4_center_cotainer","margin-left"));
+		var new4_left = parseInt($(".page4_center_cotainer").css("margin-left"));
 		if( new4_left == 0){
 			new4_left = new4_left - page4_first;
 		}
 		new4_left_px = new4_left + "px";
 		$(".page4_center_cotainer").css("margin-left",new4_left_px);
+	}
+	function this4_right(){
+		var new4_left = parseInt($(".page4_center_cotainer").css("margin-left"));
+		if( new4_left == -page4_first){
+			new4_left = new4_left + page4_first;
+		}
+		new4_left_px = new4_left + "px";
+		$(".page4_center_cotainer").css("margin-left",new4_left_px);
+	}
+	
+	/*第三张页面js相关*/
+	var page3_left = $(".page3_button .page3_button1");
+	var page3_right = $(".page3_button .page3_button2");
+	var width3 = parseInt($(".page3_lb_ul .page3_ul li").css("width"));
+	
+	page3_left.click(function(){
+		left3();
+	})
+	page3_right.click(function(){
+		right3();
+	})
+	function left3(){
+		var new1_left= parseInt($(".page3_lb_ul .page3_ul").css("margin-left"));
+		if(new1_left == -3*width3){
+			return width3;
+		}
+			new1_left = new1_left - width3;
+		new1_left_px = new1_left + "px";
+		$(".page3_lb_ul .page3_ul").css("margin-left",new1_left_px);
+		vary_css();
+	}
+	function right3(){
+		var new1_left= parseInt($(".page3_lb_ul .page3_ul").css("margin-left"));
+		if(new1_left == width3){
+			return -3*width3;
+		}
+			new1_left = new1_left + width3;
+		new1_left_px = new1_left + "px";
+		$(".page3_lb_ul .page3_ul").css("margin-left",new1_left_px);
+		vary_css();
+	}
+	
+	function vary_css(){
+		var Nindex = parseInt($(".page3_lb_ul .page3_ul").css("margin-left"));
+		var Tindex = parseInt($(".page3_lb_ul .page3_ul li").css("width"));
+		var t = Nindex / Tindex;
+		if(t == 1){
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("top","40%");
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("left","54%");
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("font-size","1.8rem");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").css("left","10%");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").css("opacity","1");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").css("opacity","0");
+		}else if(t == 0){
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("left","30%");
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("top","40%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("left","54%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("font-size","1.8rem");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").css("left","10%");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").css("opacity","1");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").css("opacity","0");
+			$(".page3 .page3_img").attr("src","img/page32.jpg")
+		}else if(t == -1){
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("left","30%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("top","40%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("left","54%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("font-size","1.8rem");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").css("left","10%");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").css("opacity","1");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").css("opacity","0");
+			$(".page3 .page3_img").attr("src","img/page33.jpg")
+		}else if( t == -2){
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("left","30%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("top","40%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("left","54%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("font-size","1.8rem");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").css("left","10%");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").css("opacity","1");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").css("opacity","0");
+			$(".page3 .page3_img").attr("src","img/page34.jpg")
+		}else if( t == -3){
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("top","40%");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("left","54%");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("font-size","1.8rem");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").css("left","10%");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").css("opacity","1");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("left","30%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").css("opacity","0");
+			$(".page3 .page3_img").attr("src","img/page34.jpg")
+		}else{
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").css("opacity","0");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("top","50%");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("left","70%");
+			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("font-size","2rem");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").css("opacity","0");
+			$(".page3 .page3_img").attr("src","img/page31.jpg")
+		}
 	}
 }
