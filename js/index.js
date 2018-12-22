@@ -190,7 +190,7 @@ window.onload = function() {
 		$(".page1 #lunbo .img_topic_p2").removeClass("img_topic_p2_animation");
 		$(".page1 #lunbo .more_border").removeClass("img_topic_more_border_animation");
 		var new_left = parseInt($("#lunbo").css("margin-left"));
-		if(new_left == 0){
+		if(new_left === 0){
 			new_left = -4*first_length;
 		}else{
 			new_left = new_left + first_length;
@@ -306,6 +306,10 @@ window.onload = function() {
 			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("font-size","2rem");
 			$(".page3_lb_ul .page3_ul .page3_li2 p").css("opacity","0");
 			$(".page3_lb_ul .page3_ul .page3_li2 p").css("top","60%");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").addClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").removeClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").removeClass("page3_li_p_animation1");
 			$(".page3 .page3_img").attr("src","img/page31.jpg")
 		}else if(t == 0){
 			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("top","50%");
@@ -324,6 +328,12 @@ window.onload = function() {
 			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("font-size","2rem");
 			$(".page3_lb_ul .page3_ul .page3_li3 p").css("opacity","0");
 			$(".page3_lb_ul .page3_ul .page3_li3 p").css("top","60%");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li1 p").removeClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").addClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").removeClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").removeClass("page3_li_p_animation1");
 			$(".page3 .page3_img").attr("src","img/page32.jpg")
 		}else if(t == -1){
 			$(".page3_lb_ul .page3_ul .page3_li2 h4").css("top","50%");
@@ -342,6 +352,12 @@ window.onload = function() {
 			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("font-size","2rem");
 			$(".page3_lb_ul .page3_ul .page3_li4 p").css("opacity","0");
 			$(".page3_lb_ul .page3_ul .page3_li4 p").css("top","60%");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li2 p").removeClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").addClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").removeClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").removeClass("page3_li_p_animation1");
 			$(".page3 .page3_img").attr("src","img/page33.jpg")
 		}else if( t == -2){
 			$(".page3_lb_ul .page3_ul .page3_li3 h4").css("top","50%");
@@ -361,6 +377,12 @@ window.onload = function() {
 			$(".page3_lb_ul .page3_ul .page3_li5 p").css("opacity","0");
 			$(".page3_lb_ul .page3_ul .page3_li5 p").css("top","60%");
 			$(".page3 .page3_img").attr("src","img/page34.jpg")
+			$(".page3_lb_ul .page3_ul .page3_li3 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li3 p").removeClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").addClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").removeClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").removeClass("page3_li_p_animation1");
 		}else if( t == -3){
 			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("top","40%");
 			$(".page3_lb_ul .page3_ul .page3_li5 h4").css("left","54%");
@@ -373,6 +395,10 @@ window.onload = function() {
 			$(".page3_lb_ul .page3_ul .page3_li4 h4").css("font-size","2rem");
 			$(".page3_lb_ul .page3_ul .page3_li4 p").css("opacity","0");
 			$(".page3_lb_ul .page3_ul .page3_li4 p").css("top","48%");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").addClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").addClass("page3_li_p_animation1");
+			$(".page3_lb_ul .page3_ul .page3_li5 p").removeClass("page3_li_p_animation");
+			$(".page3_lb_ul .page3_ul .page3_li4 p").removeClass("page3_li_p_animation1");
 			$(".page3 .page3_img").attr("src","img/page35.jpg")
 		}else{
 			$(".page3_lb_ul .page3_ul .page3_li1 h4").css("top","50%");

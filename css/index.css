@@ -299,6 +299,7 @@ li,ul,ol{
 	overflow: hidden;
 	width: 500%;
 	height: 100%;
+	transition: margin-left 1s ease; 
 }
 .img_topic1{
 	display: flex;
@@ -501,9 +502,9 @@ li,ul,ol{
 }
 /*轮播动画部分*/
 .img_topic_h4_animation{
-	animation: topic_h4  1s  forwards; 
-	-webkit-animation: topic_h4 1s  forwards;
-	-moz-animation: topic_h4 1s  forwards;
+	animation: topic_h4  1s 1s forwards; 
+	-webkit-animation: topic_h4 1s 1s forwards;
+	-moz-animation: topic_h4 1s  1s  forwards;
 }
 @-moz-keyframes topic_h4{
 	0%{
@@ -530,7 +531,7 @@ li,ul,ol{
 	}
 }
 .img_topic_p1_animation{
-	animation: topic_p1 1s forwards;
+	animation: topic_p1 1s 1s forwards;
 }
 @keyframes topic_p1{
 	from{
@@ -541,7 +542,7 @@ li,ul,ol{
 	}
 }
 .img_topic_hr_animation{
-	animation: img_topic_hr 1s forwards;	
+	animation: img_topic_hr 1s 1s forwards;	
 }
 @keyframes img_topic_hr{
 	from{
@@ -552,7 +553,7 @@ li,ul,ol{
 	}
 }
 .img_topic_p2_animation{
-	animation: img_topic_p2 1s forwards;
+	animation: img_topic_p2 1s 1s forwards;
 }
 @keyframes img_topic_p2{
 	from{
@@ -563,7 +564,7 @@ li,ul,ol{
 	}
 }
 .img_topic_more_border_animation{
-	animation: more_border 1s  forwards;	
+	animation: more_border 1s 1s forwards;	
 }
 @keyframes more_border{
 	from{
@@ -601,7 +602,7 @@ li,ul,ol{
 }
 .page1_main_hr{
 	position: absolute;
-	top: 9.8%;
+	top: 10.2%;
 	border: none;
 	height: 0.5px;
 	background-color: #fff;
@@ -761,6 +762,9 @@ li,ul,ol{
 	filter: brightness(0.8);
 	-webkit-filter: brightness(0.6);
 	transition: all 0.8s;
+	background-image: url(../img/bg-desindex.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .page3 .page3_center h4{
 	position: absolute;
@@ -851,13 +855,45 @@ li,ul,ol{
 .page3_lb_ul .page3_ul .page3_li1 p{
 	position: absolute;
 	width: 35rem;
-	height: 6.5rem;
+	height: 6.2rem;
+	line-height: 2rem;
+	overflow: hidden;
+	font-size: 0.9rem;
 	top: 48%;
 	left: 10%;
 	color: #fff;
 	z-index: 1000;
+	transform: scale(1,1);
 	transition: all 0.8s ease;
 	opacity: 1;
+}
+.page3_li_p_animation{
+	animation: page3_li_p 0.8s ease;	
+}
+@keyframes page3_li_p{
+	from{
+		height: 100%;
+		transform: scale(1,1);
+	}
+	to{
+		transform: scale(0,0);
+	}
+}
+.page3_li_p_animation1{
+	animation: page3_li_p1 0.8s ease;	
+}
+@keyframes page3_li_p1{
+	0%{
+		height: 100%;
+		transform: scale(0,0);
+	}
+	50%{
+		height: 6.2rem;
+	}
+	100%{
+		height: 6.2rem;
+		transform: scale(1,1);
+	}
 }
 
 .page3_lb_ul .page3_ul .page3_li2 h4{
@@ -873,9 +909,12 @@ li,ul,ol{
 .page3_lb_ul .page3_ul .page3_li2 p{
 	position: absolute;
 	width: 35rem;
-	height: 6.5rem;
+	height: 6.2rem;
+	line-height: 2.0rem;
+	font-size: 0.9rem;
 	top: 48%;
 	left: 33.5%;
+	overflow: hidden;
 	color: #fff;
 	z-index: 1000;
 	opacity: 0;
@@ -894,9 +933,12 @@ li,ul,ol{
 .page3_lb_ul .page3_ul .page3_li3 p{
 	position: absolute;
 	width: 35rem;
-	height: 6.5rem;
+	height: 6.2rem;
+	line-height: 2.0rem;
+	font-size: 0.9rem;
 	top: 48%;
 	left: 33.5%;
+	overflow: hidden;
 	color: #fff;
 	z-index: 1000;
 	transition: all 0.8s ease;
@@ -915,9 +957,12 @@ li,ul,ol{
 .page3_lb_ul .page3_ul .page3_li4 p{
 	position: absolute;
 	width: 35rem;
-	height: 6.5rem;
+	height: 6.2rem;
+	line-height: 2.0rem;
+	font-size: 0.9rem;
 	top: 48%;
 	left: 33.5%;
+	overflow: hidden;
 	color: #fff;
 	z-index: 1000;
 	transition: all 0.8s ease;
@@ -936,9 +981,12 @@ li,ul,ol{
 .page3_lb_ul .page3_ul .page3_li5 p{
 	position: absolute;
 	width: 35rem;
-	height: 6.5rem;
+	height: 6.2rem;
+	line-height: 2.0rem;
 	top: 48%;
 	left: 33.5%;
+	font-size: 0.9rem;
+	overflow: hidden;
 	color: #fff;
 	z-index: 1000;
 	transition: all 0.8s ease;
@@ -1026,34 +1074,34 @@ li,ul,ol{
 .page3_button ol li{
 	position: relative;
 	display: block;
-	width: 2rem;
-	height: 2rem;
+	width: 1.3rem;
+	height: 1.3rem;
 	z-index: 1000;
 }
 .page3_button ol .page3_button_ol_li1{
-	border-top: 0.5rem solid #FFF;
-	border-left: 0.5rem solid #fff;
+	border-top: 0.3rem solid #FFF;
+	border-left: 0.3rem solid #fff;
 }
 .page3_button ol .page3_button_ol_li2{
 	position: absolute;
 	top: 0;
 	right: 0;
-	border-top: 0.5rem solid #FFF;
-	border-right: 0.5rem solid #FFF;
+	border-top: 0.3rem solid #FFF;
+	border-right: 0.3rem solid #FFF;
 }
 .page3_button ol .page3_button_ol_li4{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	border-bottom: 0.5rem solid #FFF;
-	border-left: 0.5rem solid #FFF;
+	border-bottom: 0.3rem solid #FFF;
+	border-left: 0.3rem solid #FFF;
 }
 .page3_button ol .page3_button_ol_li3{
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	border-bottom: 0.5rem solid #FFF;
-	border-right: 0.5rem solid #FFF;
+	border-bottom: 0.3rem solid #FFF;
+	border-right: 0.3rem solid #FFF;
 }
 .page3_button1{
 	position: absolute;
@@ -1297,17 +1345,17 @@ li,ul,ol{
 .page5 .page5_background{
 	position: absolute;
 	left: 0;
-	top: 10%;
+	top: 10.2%;
 	background-image: url(../img/niceback.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
-	height: 90%;
+	height: 89.8%;
 }
 .page5 .page5_background .page5_ul{
 	display: block;
 	width: 80%;
-	height: 90%;
+	height: 89.8%;
 	margin: 1% auto;
 }
 .page5 .page5_background .page5_ul li {
